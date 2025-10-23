@@ -15,6 +15,9 @@
     <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
     <link rel="manifest" href="img/favicon/site.webmanifest">
+
+    <!-- Scripts -->
+     <script src="js/certifications.js" defer></script>
 </head>
 
 <body class="bg-gray-50">
@@ -346,48 +349,68 @@
     <section id="certifications" class="min-h-screen flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 px-4">
         <div class="container mx-auto max-w-4xl">
             <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Certifications</h2>
-            
-            <!-- Grid de certifications -->
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
-                
-                <!-- Certification - ANSSI -->
-                <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
 
-                    <!-- Image en haut -->
-                    <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
-                        <img src="img/certif-bannieresecnum_academie_anssi.png" alt="SecNum Académie" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-                    </div>
-                    
-                    <!-- Contenu en bas -->
-                    <div class="p-6 sm:p-8 text-center">
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800 text-center">SecNum académie - ANSSI</h3>
-                        <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold">Juillet 2025</div>
-                        <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">
-                            ANSSI - Agence nationale de la sécurité des systèmes d'information.
-                        </p>
-                        <a href="https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/13376/preview/pdf/16957" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5"><p>Voir le certificat</p></a>
-                    </div>
+                <!-- Boutons de sélection d'année -->
+                <div class="flex justify-center mb-8">
+                  <div class="inline-flex rounded-lg bg-gray-100 p-1">
+                    <button type="button" data-year="1" class="year-btn px-4 py-2 rounded-l-lg text-sm font-medium text-gray-700 hover:bg-white transition aria-pressed:bg-white">Lycée SN RISC</button>
+                    <button type="button" data-year="2" class="year-btn px-4 py-2 rounded-r-lg text-sm font-medium text-gray-700 hover:bg-white transition aria-pressed:bg-teal-700">BTS SIO 1ère année</button>
+                  </div>
                 </div>
 
-                <!-- Certification - Pix -->
-                <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
-
-                    <!-- Image en haut -->
-                    <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
-                        <img src="img/certif-banniere-pix.png" alt="Pix" class="w-full h-full object-cover hover:scale-105 transition duration-300">
-                    </div>
-                    
-                    <!-- Contenu en bas -->
-                    <div class="p-6 sm:p-8 text-center">
-                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800 text-center">Pix (512)</h3>
-                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold">Mai 2025</span>
-                        <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">
-                            Lycée Professionnel Henri Becquerel.
-                        </p>
-                        <a href="https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/13376/preview/pdf/17162" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-10"><p>Voir le certificat</p></a>
-                    </div>
-                </div>
+                <!-- Cartes Lycée SN RISC (plutard 1ere année BTS) -->
+                <div id="certifications-year-1" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
                 
+                    <!-- Certification - ANSSI (1ère année) -->
+                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
+                            <img src="img/certifications/banniere-pix.png" alt="Image de couverture PIX" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6 sm:p-8 text-center">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">PIX (573)</h3>
+                            <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold"><p>Février 2025</p></div>
+                            <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">PIX - certification de compétences numériques.</p>
+                            <a href="https://kdrive.infomaniak.com/app/share/831857/2cdbb382-6975-4b1c-9911-ceb1c91c06f4" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5">Voir le certificat</a>
+                        </div>
+                    </div>
+                    <!-- Fin cartes Lycée SN RISC -->
+                
+                </div>
+                <!-- Fin certification - ANSSI (1ère année) -->
+
+                <!-- Cartes 2ème année -->
+                <div id="certifications-year-2" class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+
+                    <!-- Certification - EBIOS (1ère année) -->
+                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
+                            <img src="img/certifications/banniere-ebios-risk-manager.png" alt="Image de couverture EBIOS" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6 sm:p-8 text-center">
+                              <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">EBIOS Risk Manager - Club EBIOS</h3>
+                              <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold"><p>Octobre 2025</p></div>
+                              <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">EBIOS - Expression des Besoins et Identification des Objectifs de Sécurité.</p>
+                              <a href="https://kdrive.infomaniak.com/app/share/831857/aed61244-17de-4112-a453-8feb9bf940d0" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5">Voir le certificat</a>
+                          </div>
+                      </div>
+                    <!-- Fin certification - EBIOS (1ère année) -->
+
+                    <!-- Certification - ANSSI (1ère année) -->
+                    <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                        <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
+                            <img src="img/certifications/banniere-secnum-academie.png" alt="Image de couverture SecNum Académie" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                        </div>
+                        <div class="p-6 sm:p-8 text-center">
+                            <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3">SecNum académie - ANSSI</h3>
+                            <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold"><p>Septembre 2025</p></div>
+                            <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">ANSSI - Agence nationale de la sécurité des systèmes d'information.</p>
+                            <a href="https://kdrive.infomaniak.com/app/share/831857/868a66cc-782d-46db-a6ac-2a75d056b4fb" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5">Voir le certificat</a>
+                        </div>
+                    </div>
+                    <!-- Fin certification - ANSSI (1ère année) --> 
+
+                </div>
+                <!-- Fin cartes 2ème année -->
             </div>
         </div>
     </section>

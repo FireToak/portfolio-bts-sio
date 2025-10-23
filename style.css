@@ -1,0 +1,12 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.section-title::after {
+    content: '';
+    display: block;
+    width: 90px;
+    height: 4px;
+    background: #3b82f6;
+    margin: 12px auto 0;
+}

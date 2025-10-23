@@ -1,0 +1,490 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio - BTS SIO</title>
+    
+    <!-- Styles -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="img/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="img/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="img/favicon/favicon-16x16.png">
+    <link rel="manifest" href="img/favicon/site.webmanifest">
+</head>
+
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm fixed w-full top-0 z-50">
+        <div class="container mx-auto px-4 sm:px-6 py-4">
+            <div class="flex justify-between items-center">
+                <h1 class="text-lg sm:text-xl font-bold">Portfolio - Louis MEDO - BTS SIO</h1>
+
+                <!-- Mobile menu button -->
+                <button id="mobile-menu-btn" class="md:hidden text-gray-700">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
+                    </svg>
+                </button>
+                
+                <!-- Desktop menu -->
+                <div class="hidden md:flex gap-4 lg:gap-8">
+                    <a href="#presentation" class="hover:text-blue-600 transition">Présentation</a>
+                    <a href="#competences" class="hover:text-blue-600 transition">Compétences</a>
+                    <a href="#projets" class="hover:text-blue-600 transition">Mes projets</a>
+                    <a href="#contact" class="bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-800 transition">Contact</a>
+                </div>
+            </div>
+            
+            <!-- Mobile menu -->
+            <div id="mobile-menu" class="hidden md:hidden mt-4 pb-4 space-y-2">
+                <a href="#presentation" class="block py-2 hover:text-blue-600 transition">Présentation</a>
+                <a href="#competences" class="block py-2 hover:text-blue-600 transition">Compétences</a>
+                <a href="#projets" class="block py-2 hover:text-blue-600 transition">Mes projets</a>
+                <a href="#contact" class="block bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-800 transition text-center">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-cyan-50 to-blue-50 pt-20 px-4">
+        <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-12 max-w-2xl w-full text-center">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 section-title">Louis MEDO</h2>
+            <p class="text-lg sm:text-xl text-gray-700 mb-6 sm:mb-8">Étudiant en BTS SIO SISR</p>
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center">
+                <button onclick="document.getElementById('presentation').scrollIntoView({behavior: 'smooth'})" class="bg-teal-700 text-white px-6 py-3 rounded-lg hover:bg-teal-800 transition">Présentation</button>
+                <button onclick="document.getElementById('experiences').scrollIntoView({behavior: 'smooth'})" class="bg-teal-700 text-white px-6 py-3 rounded-lg hover:bg-teal-800 transition">Expériences</button>
+                <button onclick="document.getElementById('projets').scrollIntoView({behavior: 'smooth'})" class="bg-teal-700 text-white px-6 py-3 rounded-lg hover:bg-teal-800 transition">Projets</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- À propos Section -->
+    <section id="presentation" class="flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">À propos</h2>
+            <div class="space-y-4 sm:space-y-6 text-base sm:text-lg text-gray-700 leading-relaxed">
+                <p>
+                    Je m'appelle Louis, passionné et autodidacte dans le domaine de l'administration système. 
+                    Actuellement, je prépare un BTS SIO (Services Informatiques au Organisations) au lycée Paul Louis Courrier.
+                </p>
+                <p>
+                    Je consacre la majeure partie de mon temps libre à me tenir informé des nouvelles technologies et 
+                    à pratiquer pour développer de nouvelles compétences. J'ai également transformé un ordinateur de 
+                    bureau Z440 en serveur chez moi, sous VMware ESXi, où je gère différentes machines virtuelles sous 
+                    Linux pour des services tels qu'OpenVPN, Docker, Nextcloud, Traefik et de l'hébergement web.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- BTS SIO Section -->
+    <section id="competences" class="flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50 py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">BTS SIO</h2>
+            <div class="bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-10">
+                <p class="text-base sm:text-lg text-gray-700 mb-6 sm:mb-8 leading-relaxed">
+                    Le BTS Services Informatiques aux Organisations est une formation en deux ans qui prépare aux 
+                    métiers de l'informatique. Il propose deux spécialités distinctes, adaptées aux différents profils 
+                    et aspirations professionnelles.
+                </p>
+                
+                <h3 class="text-xl sm:text-2xl font-semibold text-blue-600 mb-4 sm:mb-6">Objectifs du BTS :</h3>
+                
+                <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700">
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                        <span>Former des professionnels polyvalents en informatique, capables d'intervenir sur les 
+                        infrastructures, les réseaux, et les systèmes d'information.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                        <span>Développer des compétences techniques en programmation, administration système, 
+                        cybersécurité, et gestion de bases de données.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                        <span>Préparer à la gestion de projets informatiques en intégrant des méthodes agiles et 
+                        des bonnes pratiques de travail collaboratif.</span>
+                    </li>
+                    <li class="flex items-start">
+                        <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                        <span>Faciliter l'insertion professionnelle ou la poursuite d'études (licences, écoles 
+                        d'ingénieurs) grâce à une formation équilibrée entre théorie et pratique (stages, projets concrets).</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Expériences Section -->
+    <section id="experiences" class="flex items-center justify-center bg-white py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 section-title">Expériences</h2>
+            <div class="space-y-6">
+
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="flex flex-row gap-3">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Administration système</h3> 
+                        <p class="text-sm bg-blue-300 text-gray-800 px-2 py-2 rounded-2xl inline-block max-w-xs mb-1">Stage - décembre 2024</p>
+                    </div>
+                    <p class="text-gray-600 mb-4">Hutchinson / Joué-lès-Tours</p>
+                    <p class="text-gray-700 mb-8">
+                        Administration d'un serveur domestique Z440 sous VMware ESXi avec gestion de machines virtuelles 
+                        Linux pour OpenVPN, Docker, Nextcloud, Traefik et hébergement web.
+                    </p>
+                    <button class="bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition">Rapport de stage</button>
+
+                </div>
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="flex flex-row gap-3">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Administration système</h3> 
+                        <p class="text-sm bg-blue-300 text-gray-800 px-2 py-2 rounded-2xl inline-block max-w-xs mb-1">Stage - juin 2024</p>
+                    </div>
+                    <p class="text-gray-600 mb-4">Hutchinson / Joué-lès-Tours</p>
+                    <p class="text-gray-700 mb-8">
+                        Administration d'un serveur domestique Z440 sous VMware ESXi avec gestion de machines virtuelles 
+                        Linux pour OpenVPN, Docker, Nextcloud, Traefik et hébergement web.
+                    </p>
+                    <button class="bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition">Rapport de stage</button>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl shadow-lg p-8 hover:shadow-xl transition">
+                    <div class="flex flex-row gap-3">
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-2">Inforégance</h3> 
+                        <p class="text-sm bg-blue-300 text-gray-800 px-2 py-2 rounded-2xl inline-block max-w-xs mb-1">Stage - février 2024</p>
+                    </div>
+                    <p class="text-gray-600 mb-4">APB MULTIMEDIA / Tours</p>
+                    <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 mb-8">
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                            <span>Mise en place de Windows Server 2022 avec les services : Hyper-V, DNS, DHCP, Active Directory.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                            <span>Configuration de switchs et de routeurs de marque Zyxel.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                            <span>Refonte d’un réseau d’entreprise (routeur, switchs et serveur).</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                            <span>Dépannage informatique.</span>
+                        </li>
+                        <li class="flex items-start">
+                            <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                            <span>Préparation de postes de travail.</span>
+                        </li>
+                    </ul>
+                    <button class="bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition">Rapport de stage</button>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Compétences Section -->
+    <section id="projets" class="flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50 py-20">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-4xl font-bold text-center mb-12 section-title">Compétences</h2>
+            <div class="grid md:grid-cols-2 gap-6">
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Administration système</h3>
+                        <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 mb-8">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>Linux Debian 13</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>Windows Server 2025</span>
+                            </li>
+                        </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Virtualisation & conteneurisation</h3>
+                        <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 mb-8">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>VMware ESXi</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>Proxmox</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>Docker</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>VirtualBox</span>
+                            </li>
+                        </ul>
+                </div>
+                <div class="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition">
+                    <h3 class="text-xl font-semibold text-gray-800 mb-3">Automatisation</h3>
+                        <ul class="space-y-3 sm:space-y-4 text-sm sm:text-base text-gray-700 mb-8">
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>Ansible</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>Docker Compose</span>
+                            </li>
+                            <li class="flex items-start">
+                                <span class="text-blue-600 mr-3 mt-1 flex-shrink-0">•</span>
+                                <span>CI/CD</span>
+                            </li>
+                        </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formation Section -->
+    <section id="formation" class="flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Formation</h2>
+            
+            <!-- Timeline -->
+            <div class="relative">
+                <!-- Timeline line -->
+                <div class="absolute left-4 sm:left-8 top-0 bottom-0 w-1 bg-gradient-to-b from-blue-500 to-blue-300"></div>
+                
+                <!-- Timeline items -->
+                <div class="space-y-8 sm:space-y-12">
+                    <!-- Item 1 -->
+                    <div class="flex gap-4 sm:gap-6 ml-16 sm:ml-24">
+                        <!-- Circle dot -->
+                        <div class="absolute left-0 sm:left-2 w-8 sm:w-12 h-8 sm:h-12 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                        
+                        <!-- Content -->
+                        <div class="pt-1 sm:pt-2 flex-1">
+                            <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-1">BTS SIO SISR</h3>
+                            <p class="text-base sm:text-lg font-semibold text-gray-800 mb-1">Lycée Paul Louis Courrier</p>
+                            <p class="text-sm sm:text-base font-semibold text-gray-600 mb-3">2025-2027</p>
+                            <p class="text-sm sm:text-base text-gray-700">
+                                Systèmes informatiques aux organisations option solutions d'infrastructure, systèmes et réseaux.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <!-- Item 2 -->
+                    <div class="flex gap-4 sm:gap-6 ml-16 sm:ml-24">
+                        <!-- Circle dot -->
+                        <div class="absolute left-0 sm:left-2 w-8 sm:w-12 h-8 sm:h-12 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
+                        
+                        <!-- Content -->
+                        <div class="pt-1 sm:pt-2 flex-1">
+                            <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-1">BAC PRO SN RISC</h3>
+                            <p class="text-base sm:text-lg font-semibold text-gray-800 mb-1">Lycée Henri Becquerel</p>
+                            <p class="text-sm sm:text-base font-semibold text-gray-600 mb-3">2022-2025</p>
+                            <p class="text-sm sm:text-base text-gray-700">
+                                Systèmes Numériques option Réseau Informatiques et Systèmes Communicants.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projets Section -->
+    <section id="projets" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50 py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Projets</h2>
+            
+            <!-- Grid de projets -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                
+                <!-- Projet - Traefik -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <!-- Image -->
+                    <div class="h-32 sm:h-40 bg-gray-300 overflow-hidden">
+                        <img src="img/projet-traefik.png" alt="Traefik" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    
+                    <!-- Contenu -->
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800">Traefik reverse proxy</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            Mise en place d'un reverse proxy avec Traefik pour gérer les requêtes HTTPS sur mon homelab.
+                        </p>
+                        <a href="https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/17165/preview/pdf/17166" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5"><p>Voir le projet</p></a>
+                    </div>
+                </div>
+                
+                <!-- Projet - WIKI Loutik -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <!-- Image -->
+                    <div class="h-32 sm:h-40 bg-gray-300 overflow-hidden">
+                        <img src="img/projet-wiki-loutik.png" alt="Wiki Loutik" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    
+                    <!-- Contenu -->
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800">WIKI Loutik</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            Mise en place d'un wiki avec google sites pour partager mes procédures.
+                        </p>
+                        <a href="https://wiki.loutik.fr" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5"><p>Voir le projet</p></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="min-h-screen flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Certifications</h2>
+            
+            <!-- Grid de certifications -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+                
+                <!-- Certification - ANSSI -->
+                <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+
+                    <!-- Image en haut -->
+                    <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
+                        <img src="img/certif-bannieresecnum_academie_anssi.png" alt="SecNum Académie" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    
+                    <!-- Contenu en bas -->
+                    <div class="p-6 sm:p-8 text-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800 text-center">SecNum académie - ANSSI</h3>
+                        <div class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold">Juillet 2025</div>
+                        <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">
+                            ANSSI - Agence nationale de la sécurité des systèmes d'information.
+                        </p>
+                        <a href="https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/13376/preview/pdf/16957" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-5"><p>Voir le certificat</p></a>
+                    </div>
+                </div>
+
+                <!-- Certification - Pix -->
+                <div class="bg-blue-50 rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+
+                    <!-- Image en haut -->
+                    <div class="h-40 sm:h-48 bg-gray-300 overflow-hidden">
+                        <img src="img/certif-banniere-pix.png" alt="Pix" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    
+                    <!-- Contenu en bas -->
+                    <div class="p-6 sm:p-8 text-center">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800 text-center">Pix (512)</h3>
+                        <span class="inline-block bg-blue-600 text-white px-4 py-2 rounded-lg mb-4 font-semibold">Mai 2025</span>
+                        <p class="text-sm sm:text-base text-gray-700 mb-3 pb-3">
+                            Lycée Professionnel Henri Becquerel.
+                        </p>
+                        <a href="https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/13376/preview/pdf/17162" target="_blank" class="flex justify-center bg-teal-700 text-white px-4 py-3 rounded-lg hover:bg-teal-800 transition mt-10"><p>Voir le certificat</p></a>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Veille Technologique Section -->
+    <section id="projets" class="min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 to-cyan-50 py-12 sm:py-16 md:py-20 px-4">
+        <div class="container mx-auto max-w-4xl">
+            <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 sm:mb-12 section-title">Veille Technologique</h2>
+            
+            <!-- Grid de projets -->
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                
+                <!-- Projet - Traefik -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <!-- Image -->
+                    <div class="h-32 sm:h-40 bg-gray-300 overflow-hidden">
+                        <img src="img/veille-techno-banniere-le_monde_informatique.png" alt="Traefik" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    
+                    <!-- Contenu -->
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800">Le Monde informatique</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            Veille régulière sur <span class="font-bold">l’actualité technologique</span> et la <span class="font-bold">cybersécurité</span>.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Projet - WIKI Loutik -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition">
+                    <!-- Image -->
+                    <div class="h-32 sm:h-40 bg-gray-300 overflow-hidden">
+                        <img src="img/veille-techno-banniere-it_connect.png" alt="IT Connect" class="w-full h-full object-cover hover:scale-105 transition duration-300">
+                    </div>
+                    
+                    <!-- Contenu -->
+                    <div class="p-4 sm:p-6">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-3 pb-3 border-b-2 border-gray-800">IT Connect</h3>
+                        <p class="text-xs sm:text-sm text-gray-700 leading-relaxed">
+                            Veille sur <span class="font-bold">l’administration système</span>, les <span class="font-bold">solutions de sécurité</span> et les <span class="font-bold">procédures</span>. 
+                        </p>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="min-h-screen flex items-center justify-center bg-white py-20">
+        <div class="container mx-auto px-6 max-w-2xl">
+            <h2 class="text-4xl font-bold text-center mb-12 section-title">Contact</h2>
+            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl shadow-xl p-10">
+                <form class="space-y-6">
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Nom</label>
+                        <input type="text" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Email</label>
+                        <input type="email" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition">
+                    </div>
+                    <div>
+                        <label class="block text-gray-700 font-semibold mb-2">Message</label>
+                        <textarea rows="5" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-200 outline-none transition"></textarea>
+                    </div>
+                    <button type="submit" class="w-full bg-teal-700 text-white py-3 rounded-lg font-semibold hover:bg-teal-800 transition">
+                        Envoyer
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-white py-6 sm:py-8">
+        <div class="container mx-auto px-4 sm:px-6 text-center">
+            <p class="text-sm sm:text-base">&copy; 2025 Louis MEDO - Portfolio BTS SIO. Tous droits réservés.</p>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const mobileLinks = mobileMenu.querySelectorAll('a');
+        mobileLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+    </script>
+</body>
+</html>

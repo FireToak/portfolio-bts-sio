@@ -35,10 +35,10 @@
                 </button>
                 
                 <!-- Desktop menu -->
-                <div class="hidden items-center sm:flex gap-4 lg:gap-8">
-                    <a href="#presentation" class="hover:text-blue-600 transition">Présentation</a>
-                    <a href="#competences" class="hover:text-blue-600 transition">Compétences</a>
-                    <a href="#projets" class="hover:text-blue-600 transition">Mes projets</a>
+                <div class="hidden items-center sm:flex">
+                    <button onclick="document.getElementById('presentation').scrollIntoView({behavior: 'smooth'})" class="px-4 py-2 hover:text-blue-600 transition">Présentation</button>
+                    <button onclick="document.getElementById('competences').scrollIntoView({behavior: 'smooth'})" class="px-4 py-2 hover:text-blue-600 transition">Compétences</button>
+                    <button onclick="document.getElementById('projets').scrollIntoView({behavior: 'smooth'})" class="px-4 py-2 hover:text-blue-600 transition mr-4">Projets</button>
                     <a href="#contact" class="bg-teal-700 text-white px-4 py-2 rounded hover:bg-teal-800 transition">Contact</a>
                 </div>
             </div>
@@ -516,7 +516,7 @@
     <!-- Footer -->
     <footer class="bg-gray-800 text-white">
       <!-- Social bar + titre -->
-      <div class="container mx-auto pt-8 pb-6 flex flex-col sm:flex-row items-center sm:justify-between gap-4 max-w-6xl">
+      <div class="container mx-auto md:px-8 lg:px-1 pt-8 pb-6 flex flex-col sm:flex-row items-center sm:justify-between gap-4 max-w-6xl">
         <div class="font-semibold text-2xl hover:text-blue-100"><a href="#">MEDO / Louis — Portfolio</a></div>
 
         <div class="flex gap-6">

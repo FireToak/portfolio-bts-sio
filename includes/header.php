@@ -22,6 +22,17 @@
     <?php if (isset($noIndex) && $noIndex === true): ?>
         <meta name="robots" content="noindex, nofollow">
     <?php endif; ?>
+    <!-- Embeds -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://louis.loutik.fr/">
+    <meta property="og:title" content="Portfolio - Louis MEDO | Admin Système">
+    <meta property="og:description" content="Étudiant en BTS SIO. Découvrez mes projets sur Kubernetes, Proxmox et GitLab.">
+    <meta property="og:image" content="https://louis.loutik.fr/assets/img/photo-louis-medo.png">
+
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:title" content="Portfolio - Louis MEDO">
+    <meta property="twitter:description" content="Découvrez mon parcours et mes projets IT.">
+    <meta property="twitter:image" content="https://louis.loutik.fr/assets/img/photo-louis-medo.png">
 </head>
 
 <body class="overflow-x-hidden">

@@ -3,14 +3,14 @@
         "titre": "Cluster K3s Loutik",
         "image": "assets/img/projet-k3s-loutik.png",
         "description": "Mise en place d'un cluster K3s avec 3 nœuds pour héberger des applications conteneurisées.",
-        "lien": "https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/17165/preview/pdf/17166",
+        "lien": "https://louis.loutik.fr/en-cours",
         "tags": ["Docker", "Réseau", "Sécurité"]
     },
     {
         "titre": "Traefik reverse proxy",
         "image": "assets/img/projet-traefik.png",
         "description": "Mise en place d'un reverse proxy avec Traefik pour gérer les requêtes HTTPS sur mon homelab.",
-        "lien": "https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/17165/preview/pdf/17166",
+        "lien": "https://kdrive.infomaniak.com/app/share/831857/35e30e55-8e6a-4590-a075-c17dbcc8939a",
         "tags": ["Docker", "Réseau", "Sécurité"]
     },
     {

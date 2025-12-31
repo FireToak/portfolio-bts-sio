@@ -18,6 +18,10 @@
     <link rel="manifest" href="assets/img/favicon/site.webmanifest">   
     <!-- Scripts -->
      <script src="assets/js/script.js" defer></script>
+    <!-- Balise no-index -->
+    <?php if (isset($noIndex) && $noIndex === true): ?>
+        <meta name="robots" content="noindex, nofollow">
+    <?php endif; ?>
 </head>
 
 <body class="overflow-x-hidden">

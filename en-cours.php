@@ -1,4 +1,7 @@
-<?php include 'includes/header.php'; ?>
+<?php
+$noIndex = true; // On signale qu'on ne veut pas être indexé
+include 'includes/header.php'; 
+?>
 
 <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-amber-50 px-4">
     <div class="bg-white rounded-2xl shadow-xl p-8 sm:p-12 max-w-2xl w-full text-center">

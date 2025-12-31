@@ -1,0 +1,23 @@
+[
+        {
+        "titre": "Cluster K3s",
+        "image": "assets/img/projet-k3s.png",
+        "description": "Mise en place d'un cluster K3s avec 3 nœuds pour héberger des applications conteneurisées.",
+        "lien": "https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/17165/preview/pdf/17166",
+        "tags": ["Docker", "Réseau", "Sécurité"]
+    },
+    {
+        "titre": "Traefik reverse proxy",
+        "image": "assets/img/projet-traefik.png",
+        "description": "Mise en place d'un reverse proxy avec Traefik pour gérer les requêtes HTTPS sur mon homelab.",
+        "lien": "https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/17165/preview/pdf/17166",
+        "tags": ["Docker", "Réseau", "Sécurité"]
+    },
+    {
+        "titre": "WIKI Loutik",
+        "image": "assets/img/projet-wiki-loutik.png",
+        "description": "Mise en place d'un wiki avec google sites pour partager mes procédures.",
+        "lien": "https://wiki.loutik.fr",
+        "tags": ["Documentation", "Web", "Partage"]
+    }
+]

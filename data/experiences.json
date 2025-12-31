@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Stage",
+        "date": "décembre 2024",
+        "poste": "Administration système",
+        "entreprise": "Hutchinson / Joué-lès-Tours",
+        "description": "Administration d'un serveur domestique Z440 sous VMware ESXi avec gestion de machines virtuelles Linux pour OpenVPN, Docker, Nextcloud, Traefik et hébergement web.",
+        "lien_rapport": "https://www.loutik.fr"
+    },
+    {
+        "type": "Stage",
+        "date": "juin 2024",
+        "poste": "Administration système",
+        "entreprise": "Hutchinson / Joué-lès-Tours",
+        "description": "Administration d'un serveur domestique Z440 sous VMware ESXi avec gestion de machines virtuelles Linux...",
+        "lien_rapport": "#"
+    },
+    {
+        "type": "Stage",
+        "date": "février 2024",
+        "poste": "Inforégance",
+        "entreprise": "APB MULTIMEDIA / Tours",
+        "description": "Administration d’un serveur domestique HP Z440 sous VMware ESXi, avec gestion de machines virtuelles Linux...",
+        "lien_rapport": "#"
+    }
+]

@@ -1,0 +1,9 @@
+---
+# Local development environment for a PHP web application
+services:
+  web:
+    image: php:8.2-apache
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www/html/

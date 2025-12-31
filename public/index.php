@@ -3,7 +3,7 @@
 
 // Fonction pour charger et valider les données JSON
 function loadJsonData($filename) {
-    $filepath = __DIR__ . '/data/' . $filename;
+    $filepath = __DIR__ . '/../data/' . $filename;
     
     if (!file_exists($filepath)) {
         error_log("Fichier JSON introuvable : $filepath");
@@ -55,7 +55,7 @@ $veilles = loadJsonData('veille.json');
 $certif_annee1 = array_filter($certifications, fn($c) => ($c['annee'] ?? 0) == 1);
 $certif_annee2 = array_filter($certifications, fn($c) => ($c['annee'] ?? 0) == 2);
 
-include 'includes/header.php';
+include __DIR__ . '/../includes/header.php';
 ?>
 
     <!-- Hero Section -->
@@ -454,4 +454,4 @@ include 'includes/header.php';
         </div>
     </section>
 
-<?php include 'includes/footer.php'; ?>
+<?php include '/../includes/footer.php'; ?>

@@ -1,6 +1,6 @@
 <?php
 $noIndex = true; // On signale qu'on ne veut pas être indexé
-include 'includes/header.php'; 
+include __DIR__ . '/../includes/header.php'; 
 ?>
 
 <section class="min-h-screen flex items-center justify-center bg-gradient-to-br from-yellow-50 to-amber-50 px-4">
@@ -28,4 +28,4 @@ include 'includes/header.php';
     </div>
 </section>
 
-<?php include 'includes/footer.php'; ?>
+<?php include __DIR__ . '/../includes/footer.php'; ?>

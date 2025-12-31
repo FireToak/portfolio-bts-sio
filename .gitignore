@@ -1,1 +1,15 @@
+# Fichiers systèmes (Windows/Mac)
+Thumbs.db
+.DS_Store
+
+# Configuration IDE
+.vscode/
+.idea/
+
+# Dossiers temporaires ou logs
+*.log
+tmp/
+
+# Environnement de développement local
 .env
+

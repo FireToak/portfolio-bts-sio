@@ -40,6 +40,13 @@ jobs:
         uses: docker/metadata-action@v5
         with:
           images: ${{ env.REGISTRY }}/${{ env.IMAGE_NAME }}
+          tags: |
+            # Si branche (main), on ajoute le tag 'latest'
+            type=raw,value=latest,enable={{is_default_branch}}
+            # Garde le nom de la branche (main)
+            type=ref,event=branch
+            # Gestion tags Git (v1.0.0) automatiquement
+            type=semver,pattern={{version}}
 
       # 4. Construction et Envoi (Build & Push)
       - name: Build and push Docker image

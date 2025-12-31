@@ -161,15 +161,15 @@ include __DIR__ . '/../includes/header.php';
 
     <!-- Compétences Section -->
     <section id="competences" class="<?= CSS_SECTION_BG_GRADIENT ?>">
-        <div class="container mx-auto px-6 max-w-6xl">
+        <div class="container mx-auto px-6 max-w-4xl">
             <h2 class="text-4xl font-bold text-center mb-12 section-title">Compétences</h2>
             
-            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <?php if (empty($competences)): ?>
                     <p class="col-span-full text-center text-gray-600">Aucune compétence disponible.</p>
                 <?php else: ?>
                     <?php foreach ($competences as $cat): ?>
-                        <div class="<?= CSS_CARD ?> p-6 duration-300">
+                        <div class="<?= CSS_CARD ?> p-6 duration-300 flex flex-col h-full">
                             <h3 class="text-xl font-semibold text-gray-800 mb-6 pb-2 border-b-2 border-gray-800">
                                 <?= e($cat['category'] ?? '') ?>
                             </h3>

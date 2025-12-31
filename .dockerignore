@@ -10,3 +10,4 @@ Dockerfile
 # Documentation et fichiers divers
 README.md
 *.md
+.env

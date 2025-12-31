@@ -2,12 +2,17 @@
 .git
 .gitignore
 
-# Fichiers de configuration Docker
+# Fichiers de configuration Docker et CI/CD
 docker-compose.yaml
 Dockerfile
 .dockerignore
+.github
 
 # Documentation et fichiers divers
 README.md
 *.md
 .env
+.vscode
+.idea
+Thumbs.db
+.DS_Store

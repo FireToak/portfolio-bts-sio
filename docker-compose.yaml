@@ -3,6 +3,7 @@
 services:
   web:
     image: php:8.2-apache
+    container_name: portfolio-web-dev
     ports:
       - "80:80"
     volumes:

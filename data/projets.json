@@ -1,7 +1,7 @@
 [
         {
-        "titre": "Cluster K3s",
-        "image": "assets/img/projet-k3s.png",
+        "titre": "Cluster K3s Loutik",
+        "image": "assets/img/projet-k3s-loutik.png",
         "description": "Mise en place d'un cluster K3s avec 3 nœuds pour héberger des applications conteneurisées.",
         "lien": "https://ksuite.infomaniak.com/1267996/kdrive/app/drive/831857/files/17165/preview/pdf/17166",
         "tags": ["Docker", "Réseau", "Sécurité"]

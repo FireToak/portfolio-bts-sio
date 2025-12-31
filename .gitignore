@@ -1,4 +1,4 @@
-# Fichiers systèmes (Windows/Mac)
+# Fichiers systèmes
 Thumbs.db
 .DS_Store
 
@@ -6,10 +6,15 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Dossiers temporaires ou logs
-*.log
+# Node.js - Dépendances et Logs
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dossiers temporaires
 tmp/
 
-# Environnement de développement local
+# Environnement et Secrets (Très important)
 .env
-
+.env.local

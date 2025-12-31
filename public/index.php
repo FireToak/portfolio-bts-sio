@@ -148,7 +148,7 @@ include __DIR__ . '/../includes/header.php';
                                 </h3>
                             </div>
                             <p class="text-gray-600 mb-4"><?= e($exp['entreprise'] ?? '') ?></p>
-                            <p class="text-gray-700 mb-8 line-clamp-4"><?= e($exp['description'] ?? '') ?></p>
+                            <p class="text-gray-700 mb-8 sm:line-clamp-4"><?= e($exp['description'] ?? '') ?></p>
                             <?php if (!empty($exp['lien_rapport'])): ?>
                                 <a href="<?= e($exp['lien_rapport']) ?>" target="_blank" rel="noopener noreferrer" class="<?= CSS_BTN_PRIMARY ?>">Rapport de stage</a>
                             <?php endif; ?>

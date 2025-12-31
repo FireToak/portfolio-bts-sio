@@ -1,0 +1,12 @@
+# Système de versionning
+.git
+.gitignore
+
+# Fichiers de configuration Docker
+docker-compose.yaml
+Dockerfile
+.dockerignore
+
+# Documentation et fichiers divers
+README.md
+*.md

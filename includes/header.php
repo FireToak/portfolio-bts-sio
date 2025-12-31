@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Portfolio - BTS SIO</title>
+    <title>Louis MEDO - Portfolio - BTS SIO</title>
     <meta name="description" content="Portfolio de Louis MEDO, étudiant en BTS SIO option SISR. Découvrez mes projets en administration système, cloud et cybersécurité.">
     <meta name="author" content="Louis MEDO">
 

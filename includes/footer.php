@@ -1,3 +1,4 @@
+    </main>
     <footer class="bg-gray-800 text-white">
       <!-- Social bar + titre -->
       <div class="container mx-auto md:px-8 lg:px-1 pt-8 pb-6 flex flex-col sm:flex-row items-center sm:justify-between gap-4 max-w-6xl">

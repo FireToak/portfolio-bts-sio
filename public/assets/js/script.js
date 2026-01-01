@@ -41,7 +41,7 @@ const initSidebarNav = () => {
     // Close sidebar when clicking a nav link on mobile
     $$('.nav-link').forEach(link => {
         link.addEventListener('click', () => {
-            if (window.innerWidth < 1024) { // lg breakpoint
+            if (window.innerWidth < 1430) { // lg breakpoint
                 toggleSidebar();
             }
         });

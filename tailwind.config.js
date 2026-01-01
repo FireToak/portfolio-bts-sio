@@ -7,6 +7,13 @@ module.exports = {
   ],
   theme: {
     extend: {},
+    screens: {
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1430px',  // Changé de 1024px à 1300px
+      'xl': '1536px',
+      '2xl': '1536px',
+    },
   },
   plugins: [],
 }

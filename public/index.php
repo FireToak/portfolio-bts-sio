@@ -207,16 +207,16 @@ include __DIR__ . '/../includes/header.php';
                                     <div class="absolute left-0 sm:left-2 w-8 sm:w-12 h-8 sm:h-12 bg-blue-500 rounded-full border-4 border-white shadow-lg"></div>
 
                                     <div class="pt-1 sm:pt-2 flex-1">
-                                        <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-1 line-clamp-2">
+                                        <h3 class="text-xl sm:text-2xl font-bold text-blue-600 mb-1 sm:line-clamp-2">
                                             <?= e($formation['diplome'] ?? '') ?>
                                         </h3>
-                                        <p class="text-base sm:text-lg font-semibold text-gray-800 mb-1 line-clamp-1">
+                                        <p class="text-base sm:text-lg font-semibold text-gray-800 mb-1 sm:line-clamp-1">
                                             <?= e($formation['ecole'] ?? '') ?>
                                         </p>
-                                        <p class="text-sm sm:text-base font-semibold text-gray-600 mb-3 line-clamp-1">
+                                        <p class="text-sm sm:text-base font-semibold text-gray-600 mb-3 sm:line-clamp-1">
                                             <?= e($formation['annee'] ?? '') ?>
                                         </p>
-                                        <p class="text-sm sm:text-base text-gray-700 line-clamp-3">
+                                        <p class="text-sm sm:text-base text-gray-700 sm:line-clamp-3">
                                             <?= e($formation['description'] ?? '') ?>
                                         </p>
                                     </div>

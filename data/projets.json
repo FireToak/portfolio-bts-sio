@@ -1,9 +1,16 @@
 [
-        {
+    {
+        "titre": "LoutikTUNNEL",
+        "image": "assets/img/projet-tunnel-loutik.png",
+        "description": "Mise en place d'un tunnel VPN ainsi qu'un WAF pour sécuriser l'accès à mon homelab.",
+        "lien": "https://docs.loutik.fr/docs/homelab/socle-physique-et-reseau/introduction#2-la-gateway--un-cloudflare-tunnel-fait-maison",
+        "tags": ["Docker", "Réseau", "Sécurité"]
+    },
+    {
         "titre": "Cluster K3s Loutik",
         "image": "assets/img/projet-k3s-loutik.png",
         "description": "Mise en place d'un cluster K3s avec 3 nœuds pour héberger des applications conteneurisées.",
-        "lien": "https://louis.loutik.fr/en-cours",
+        "lien": "https://docs.loutik.fr/docs/homelab/cluster-k3s/introduction",
         "tags": ["Docker", "Réseau", "Sécurité"]
     },
     {
@@ -16,8 +23,8 @@
     {
         "titre": "WIKI Loutik",
         "image": "assets/img/projet-wiki-loutik.png",
-        "description": "Mise en place d'un wiki avec google sites pour partager mes procédures.",
-        "lien": "https://wiki.loutik.fr",
+        "description": "Mise en place d'un wiki avec docusaurus pour partager mes procédures.",
+        "lien": "https://docs.loutik.fr",
         "tags": ["Documentation", "Web", "Partage"]
     }
 ]

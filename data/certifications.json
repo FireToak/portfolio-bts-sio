@@ -1,4 +1,12 @@
 [
+        {
+        "titre": "Docker Beginner",
+        "annee": 2,
+        "date": "Novembre 2025",
+        "description": "KodeKloud - Formation technologie cloud.",
+        "image": "assets/img/certifications/banniere-kodekloud.png",
+        "lien": "https://learn.kodekloud.com/certificate/befd684a-f383-4ae3-bb38-f9bd6fcda9ea"
+    },
     {
         "titre": "PIX (573)",
         "annee": 1,
@@ -30,5 +38,5 @@
         "description": "ANSSI - Agence nationale de la sécurité des systèmes d'information.",
         "image": "assets/img/certifications/banniere-secnum-academie.png",
         "lien": "https://kdrive.infomaniak.com/app/share/831857/868a66cc-782d-46db-a6ac-2a75d056b4fb"
-    }
+    } 
 ]

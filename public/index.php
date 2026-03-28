@@ -55,6 +55,11 @@ $veilles = loadJsonData('veille.json');
 $certif_annee1 = array_filter($certifications, fn($c) => ($c['annee'] ?? 0) == 1);
 $certif_annee2 = array_filter($certifications, fn($c) => ($c['annee'] ?? 0) == 2);
 
+// Project category split (default: personnel)
+$normalizeProjectCategory = fn($projet) => strtolower(trim($projet['categorie'] ?? 'personnel'));
+$projets_bts = array_filter($projets, fn($p) => $normalizeProjectCategory($p) === 'bts');
+$projets_personnels = array_filter($projets, fn($p) => $normalizeProjectCategory($p) === 'personnel');
+
 include __DIR__ . '/../includes/header.php';
 ?>
 
@@ -233,44 +238,73 @@ include __DIR__ . '/../includes/header.php';
     <section id="projets" class="<?= CSS_SECTION_BG_GRADIENT ?>">
         <div class="<?= CSS_CONTAINER ?>">
             <h2 class="<?= CSS_TITLE ?>">Projets</h2>
-                     
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
-                <?php if (empty($projets)): ?>
-                    <p class="col-span-full text-center text-gray-600">Aucun projet disponible.</p>
-                <?php else: ?>
-                    <?php foreach ($projets as $projet): ?>
-                        <div class="<?= CSS_CARD ?> flex flex-col h-full">
-                            <div class="<?= CSS_IMG_CONTAINER ?>">
-                                <img src="<?= e($projet['image'] ?? '') ?>" 
-                                     alt="<?= e($projet['titre'] ?? '') ?>" 
-                                     class="<?= CSS_IMG ?>"
-                                     loading="lazy">
-                            </div>
 
-                            <div class="p-4 sm:p-6 flex flex-col flex-grow">
-                                <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 pb-2 border-b-2 border-gray-800 line-clamp-2">
-                                    <?= e($projet['titre'] ?? '') ?>
-                                </h3>
-                        
-                                <div class="flex flex-wrap gap-2 mb-3">
-                                    <?php foreach ($projet['tags'] ?? [] as $tag): ?>
-                                        <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                                            <?= e($tag) ?>
-                                        </span>
-                                    <?php endforeach; ?>
-                                </div>
-                                    
-                                <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 flex-grow line-clamp-4">
-                                    <?= e($projet['description'] ?? '') ?>
-                                </p>
-                                    
-                                <?php if (!empty($projet['lien'])): ?>
-                                    <a href="<?= e($projet['lien']) ?>" target="_blank" rel="noopener noreferrer" class="flex justify-center <?= CSS_BTN_PRIMARY ?> mt-auto">
-                                        <p>Voir le projet</p>
-                                    </a>
-                                <?php endif; ?>
-                            </div>
+            <div class="flex justify-center mb-8">
+                <div class="inline-flex rounded-lg bg-gray-100 p-1">
+                    <button type="button" data-project-category="bts" class="project-btn px-4 py-2 rounded-l-lg text-sm font-medium text-gray-700 hover:bg-white transition">
+                        BTS SIO
+                    </button>
+                    <button type="button" data-project-category="personnel" class="project-btn px-4 py-2 rounded-r-lg text-sm font-medium text-gray-700 hover:bg-white transition">
+                        Projets personnels
+                    </button>
+                </div>
+            </div>
+
+            <?php
+            function renderProjectCard($projet) {
+                ?>
+                <div class="<?= CSS_CARD ?> flex flex-col h-full">
+                    <div class="<?= CSS_IMG_CONTAINER ?>">
+                        <img src="<?= e($projet['image'] ?? '') ?>"
+                             alt="<?= e($projet['titre'] ?? '') ?>"
+                             class="<?= CSS_IMG ?>"
+                             loading="lazy">
+                    </div>
+
+                    <div class="p-4 sm:p-6 flex flex-col flex-grow">
+                        <h3 class="text-lg sm:text-xl font-bold text-gray-800 mb-2 pb-2 border-b-2 border-gray-800 line-clamp-2">
+                            <?= e($projet['titre'] ?? '') ?>
+                        </h3>
+
+                        <div class="flex flex-wrap gap-2 mb-3">
+                            <?php foreach ($projet['tags'] ?? [] as $tag): ?>
+                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                    <?= e($tag) ?>
+                                </span>
+                            <?php endforeach; ?>
                         </div>
+
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 flex-grow line-clamp-4">
+                            <?= e($projet['description'] ?? '') ?>
+                        </p>
+
+                        <?php if (!empty($projet['lien'])): ?>
+                            <a href="<?= e($projet['lien']) ?>" target="_blank" rel="noopener noreferrer" class="flex justify-center <?= CSS_BTN_PRIMARY ?> mt-auto">
+                                <p>Voir le projet</p>
+                            </a>
+                        <?php endif; ?>
+                    </div>
+                </div>
+                <?php
+            }
+            ?>
+
+            <div id="projets-category-bts" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6">
+                <?php if (empty($projets_bts)): ?>
+                    <p class="col-span-full text-center text-gray-600">Aucun projet BTS SIO disponible pour le moment.</p>
+                <?php else: ?>
+                    <?php foreach ($projets_bts as $projet): ?>
+                        <?php renderProjectCard($projet); ?>
+                    <?php endforeach; ?>
+                <?php endif; ?>
+            </div>
+
+            <div id="projets-category-personnel" class="grid grid-cols-1 md:grid-cols-2 gap-4 sm:gap-6 hidden">
+                <?php if (empty($projets_personnels)): ?>
+                    <p class="col-span-full text-center text-gray-600">Aucun projet personnel disponible pour le moment.</p>
+                <?php else: ?>
+                    <?php foreach ($projets_personnels as $projet): ?>
+                        <?php renderProjectCard($projet); ?>
                     <?php endforeach; ?>
                 <?php endif; ?>
             </div>

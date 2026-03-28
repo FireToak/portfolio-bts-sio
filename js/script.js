@@ -1,55 +1,166 @@
-// Mobile menu toggle
-const mobileMenuBtn = document.getElementById('mobile-menu-btn');
-const mobileMenu = document.getElementById('mobile-menu');
+// === CONFIGURATION ===
+const config = {
+    scrollBehavior: 'smooth',
+    scrollOffset: 80
+};
 
-mobileMenuBtn.addEventListener('click', () => {
-    mobileMenu.classList.toggle('hidden');
-});
+// === UTILITIES ===
+const $ = (selector) => document.querySelector(selector);
+const $$ = (selector) => document.querySelectorAll(selector);
 
-// Close mobile menu when clicking on a link
-const mobileLinks = mobileMenu.querySelectorAll('a');
-mobileLinks.forEach(link => {
-    link.addEventListener('click', () => {
-        mobileMenu.classList.add('hidden');
+const scrollToSection = (sectionId) => {
+    const section = $(`#${sectionId}`);
+    if (!section) return;
+
+    const yOffset = -config.scrollOffset;
+    const y = section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+    window.scrollTo({
+        top: y,
+        behavior: config.scrollBehavior
     });
-});
+};
 
-// Module pour la section des certifications (changement d'année)
+// === SIDEBAR NAVIGATION ===
+const initSidebarNav = () => {
+    const mobileMenuBtn = $('#mobile-menu-btn');
+    const sidebar = $('#sidebar-nav');
+    const overlay = $('#sidebar-overlay');
+
+    if (!mobileMenuBtn || !sidebar || !overlay) return;
+
+    const toggleSidebar = () => {
+        sidebar.classList.toggle('-translate-x-full');
+        overlay.classList.toggle('hidden');
+    };
+
+    mobileMenuBtn.addEventListener('click', toggleSidebar);
+    overlay.addEventListener('click', toggleSidebar);
+
+    $$('.nav-link').forEach((link) => {
+        link.addEventListener('click', () => {
+            if (window.innerWidth < 1430) {
+                toggleSidebar();
+            }
+        });
+    });
+};
+
+// === SCROLL BUTTONS ===
+const initScrollButtons = () => {
+    $$('.scroll-btn, button[data-scroll-to], .nav-link').forEach((btn) => {
+        const target = btn.getAttribute('data-scroll-to');
+        if (!target) return;
+
+        btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            scrollToSection(target);
+        });
+    });
+};
+
+// === ACTIVE LINK HIGHLIGHT ===
+const initActiveLinks = () => {
+    const observerOptions = {
+        root: null,
+        rootMargin: '-20% 0px -70% 0px',
+        threshold: 0
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+            if (!entry.isIntersecting) return;
+
+            const id = entry.target.id;
+            $$('.nav-link').forEach((link) => {
+                link.classList.remove('bg-blue-50', 'text-blue-600');
+                if (link.getAttribute('data-scroll-to') === id) {
+                    link.classList.add('bg-blue-50', 'text-blue-600');
+                }
+            });
+        });
+    }, observerOptions);
+
+    const sectionIds = new Set();
+    $$('button[data-scroll-to], .nav-link').forEach((btn) => {
+        const target = btn.getAttribute('data-scroll-to');
+        if (target) sectionIds.add(target);
+    });
+
+    sectionIds.forEach((id) => {
+        const section = $(`#${id}`);
+        if (section) observer.observe(section);
+    });
+};
+
+// === GENERIC TAB SWITCHER ===
+const initTabSwitcher = ({
+    buttonSelector,
+    dataAttribute,
+    panelPrefix,
+    defaultValue,
+    activeClasses = ['bg-white', 'text-teal-800', 'font-bold']
+}) => {
+    const buttons = $$(buttonSelector);
+    if (buttons.length === 0) return;
+
+    const switchTo = (button) => {
+        const value = button.getAttribute(dataAttribute);
+        if (!value) return;
+
+        buttons.forEach((btn) => {
+            btn.classList.remove(...activeClasses);
+            btn.classList.add('text-gray-700');
+        });
+
+        button.classList.add(...activeClasses);
+        button.classList.remove('text-gray-700');
+
+        $$(`[id^="${panelPrefix}"]`).forEach((panel) => panel.classList.add('hidden'));
+
+        const targetPanel = $(`#${panelPrefix}${value}`);
+        if (targetPanel) targetPanel.classList.remove('hidden');
+    };
+
+    buttons.forEach((btn) => {
+        btn.addEventListener('click', () => switchTo(btn));
+    });
+
+    if (defaultValue) {
+        const initialButton = document.querySelector(`${buttonSelector}[${dataAttribute}="${defaultValue}"]`);
+        if (initialButton) {
+            switchTo(initialButton);
+            return;
+        }
+    }
+
+    switchTo(buttons[0]);
+};
+
+// === INITIALIZATION ===
 document.addEventListener('DOMContentLoaded', () => {
-  document.querySelectorAll('.year-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const year = btn.getAttribute('data-year');
-      document.querySelectorAll('.year-btn').forEach(b => {
-        b.classList.remove('bg-white','text-teal-800','font-bold');
-        b.classList.add('text-gray-700');
-      });
-      btn.classList.add('bg-white','text-teal-800','font-bold');
+    initSidebarNav();
+    initScrollButtons();
+    initActiveLinks();
 
-      document.querySelectorAll('#certifications-year-1, #certifications-year-2').forEach(el => el.classList.add('hidden'));
-      const target = document.getElementById(`certifications-year-${year}`);
-      if (target) target.classList.remove('hidden');
+    initTabSwitcher({
+        buttonSelector: '.year-btn',
+        dataAttribute: 'data-year',
+        panelPrefix: 'certifications-year-',
+        defaultValue: '1'
     });
-  });
 
-  const initial = document.querySelector('.year-btn[data-year="2"]');
-  if (initial) initial.click();
+    initTabSwitcher({
+        buttonSelector: '.epreuves-btn',
+        dataAttribute: 'data-epreuve',
+        panelPrefix: 'epreuve-',
+        defaultValue: '5'
+    });
+
+    initTabSwitcher({
+        buttonSelector: '.project-btn',
+        dataAttribute: 'data-project-category',
+        panelPrefix: 'projets-category-',
+        defaultValue: 'bts'
+    });
 });
-
-// Module pour la section des épreuves (changement d'épreuves)
-  document.querySelectorAll('.epreuves-btn').forEach(btn => {
-    btn.addEventListener('click', () => {
-      const epreuve = btn.getAttribute('data-epreuve');
-      document.querySelectorAll('.epreuves-btn').forEach(b => {
-        b.classList.remove('bg-white','text-teal-800','font-bold');
-        b.classList.add('text-gray-700');
-      });
-      btn.classList.add('bg-white','text-teal-800','font-bold');
-
-      document.querySelectorAll('#epreuve-5, #epreuve-6').forEach(el => el.classList.add('hidden'));
-      const target = document.getElementById(`epreuve-${epreuve}`);
-      if (target) target.classList.remove('hidden');
-    });
-  });
-
-  const initialEpreuve = document.querySelector('.epreuves-btn[data-epreuve="5"]');
-  if (initialEpreuve) initialEpreuve.click();

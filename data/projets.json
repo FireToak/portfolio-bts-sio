@@ -1,30 +1,42 @@
 [
     {
+        "titre": "Site vitrine ArkAI",
+        "image": "assets/img/projet_bts_sio_arkai.png",
+        "description": "Réalise d'un site vitrine avec Boostrap pour la startup fictive ArkAi.",
+        "lien": "https://github.com/FireToak/bts-sio_boostrap-startup-arkai",
+        "tags": ["Développer la présence en ligne de l'organisation", "Travailler en mode projet", "Mettre à disposition des utilisateurs un service informatique"],
+        "categorie": "bts"
+    },
+    {
         "titre": "LoutikTUNNEL",
         "image": "assets/img/projet-tunnel-loutik.png",
         "description": "Mise en place d'un tunnel VPN ainsi qu'un WAF pour sécuriser l'accès à mon homelab.",
         "lien": "https://docs.loutik.fr/docs/homelab/socle-physique-et-reseau/introduction#2-la-gateway--un-cloudflare-tunnel-fait-maison",
-        "tags": ["Docker", "Réseau", "Sécurité"]
+        "tags": ["Docker", "Réseau", "Sécurité"],
+        "categorie": "personnel"
     },
     {
         "titre": "Cluster K3s Loutik",
         "image": "assets/img/projet-k3s-loutik.png",
         "description": "Mise en place d'un cluster K3s avec 3 nœuds pour héberger des applications conteneurisées.",
         "lien": "https://docs.loutik.fr/docs/homelab/cluster-k3s/introduction",
-        "tags": ["Docker", "Réseau", "Sécurité"]
+        "tags": ["Docker", "Réseau", "Sécurité"],
+        "categorie": "personnel"
     },
     {
         "titre": "Traefik reverse proxy",
         "image": "assets/img/projet-traefik.png",
         "description": "Mise en place d'un reverse proxy avec Traefik pour gérer les requêtes HTTPS sur mon homelab.",
         "lien": "https://kdrive.infomaniak.com/app/share/831857/35e30e55-8e6a-4590-a075-c17dbcc8939a",
-        "tags": ["Docker", "Réseau", "Sécurité"]
+        "tags": ["Docker", "Réseau", "Sécurité"],
+        "categorie": "personnel"
     },
     {
         "titre": "WIKI Loutik",
         "image": "assets/img/projet-wiki-loutik.png",
         "description": "Mise en place d'un wiki avec docusaurus pour partager mes procédures.",
         "lien": "https://docs.loutik.fr",
-        "tags": ["Documentation", "Web", "Partage"]
+        "tags": ["Documentation", "Web", "Partage"],
+        "categorie": "personnel"
     }
 ]

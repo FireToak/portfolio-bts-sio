@@ -252,6 +252,8 @@ include __DIR__ . '/../includes/header.php';
 
             <?php
             function renderProjectCard($projet) {
+                $isBtsProject = strtolower(trim($projet['categorie'] ?? 'personnel')) === 'bts';
+                $tags = $projet['tags'] ?? [];
                 ?>
                 <div class="<?= CSS_CARD ?> flex flex-col h-full">
                     <div class="<?= CSS_IMG_CONTAINER ?>">
@@ -266,17 +268,30 @@ include __DIR__ . '/../includes/header.php';
                             <?= e($projet['titre'] ?? '') ?>
                         </h3>
 
-                        <div class="flex flex-wrap gap-2 mb-3">
-                            <?php foreach ($projet['tags'] ?? [] as $tag): ?>
-                                <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
-                                    <?= e($tag) ?>
-                                </span>
-                            <?php endforeach; ?>
-                        </div>
+                        <?php if (!$isBtsProject && !empty($tags)): ?>
+                            <div class="flex flex-wrap gap-2 mb-3">
+                                <?php foreach ($tags as $tag): ?>
+                                    <span class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded">
+                                        <?= e($tag) ?>
+                                    </span>
+                                <?php endforeach; ?>
+                            </div>
+                        <?php endif; ?>
 
-                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 flex-grow line-clamp-4">
+                        <p class="text-sm sm:text-base text-gray-700 leading-relaxed mb-4 <?= $isBtsProject ? '' : 'flex-grow line-clamp-4' ?>">
                             <?= e($projet['description'] ?? '') ?>
                         </p>
+
+                        <?php if ($isBtsProject && !empty($tags)): ?>
+                            <div class="mb-4">
+                                <h4 class="text-sm sm:text-base font-semibold text-gray-800 mb-2">Compétences mobilisées</h4>
+                                <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base text-gray-700">
+                                    <?php foreach ($tags as $tag): ?>
+                                        <li><?= e($tag) ?></li>
+                                    <?php endforeach; ?>
+                                </ul>
+                            </div>
+                        <?php endif; ?>
 
                         <?php if (!empty($projet['lien'])): ?>
                             <a href="<?= e($projet['lien']) ?>" target="_blank" rel="noopener noreferrer" class="flex justify-center <?= CSS_BTN_PRIMARY ?> mt-auto">

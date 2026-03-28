@@ -1,8 +1,32 @@
 [
     {
+        "titre": "Infrastructure Sysguard",
+        "image": "assets/img/projet_bts-sio_sysguard.png",
+        "description": "Conception et déploiement d'une infrastructure Windows Server intégrant DNS, Active Directory et IIS pour l'administration du domaine Sysguard, dans le cadre d'une mise en situation professionnelle.",
+        "lien": "https://github.com/FireToak/bts-sio_sysguard",
+        "tags": ["Gérer le patrimoine informatique", "Développer la présence en ligne de l'organisation", "Mettre à disposition des utilisateurs un service informatique"],
+        "categorie": "bts"
+    },
+    {
+        "titre": "Infrastructure CFORPRO",
+        "image": "assets/img/projet_bts-sio_cforpro.png",
+        "description": "Conception d'une architecture réseau (plan d'adressage IP et segmentation VLAN) à la suite d'une réorganisation de l'entreprise CFORPRO, dans un contexte simulé.",
+        "lien": "https://github.com/FireToak",
+        "tags": ["Gérer le patrimoine informatique", "Mettre à disposition des utilisateurs un service informatique"],
+        "categorie": "bts"
+    },
+    {
+        "titre": "Infrastructure MAME",
+        "image": "assets/img/projet_bts-sio_mame.png",
+        "description": "Déploiement d'une infrastructure réseau et système pour MAME, avec configuration des services DHCP et DNS dans le cadre d'un scénario professionnel simulé.",
+        "lien": "https://github.com/FireToak/bts-sio_mame",
+        "tags": ["Gérer le patrimoine informatique", "Travailler en mode projet", "Mettre à disposition des utilisateurs un service informatique"],
+        "categorie": "bts"
+    },
+    {
         "titre": "Site vitrine ArkAI",
         "image": "assets/img/projet_bts_sio_arkai.png",
-        "description": "Réalise d'un site vitrine avec Boostrap pour la startup fictive ArkAi.",
+        "description": "Réalisation d'un site vitrine responsive avec Bootstrap pour la startup fictive ArkAI, en mettant l'accent sur la présentation de l'offre et l'expérience utilisateur.",
         "lien": "https://github.com/FireToak/bts-sio_boostrap-startup-arkai",
         "tags": ["Développer la présence en ligne de l'organisation", "Travailler en mode projet", "Mettre à disposition des utilisateurs un service informatique"],
         "categorie": "bts"
@@ -10,7 +34,7 @@
     {
         "titre": "LoutikTUNNEL",
         "image": "assets/img/projet-tunnel-loutik.png",
-        "description": "Mise en place d'un tunnel VPN ainsi qu'un WAF pour sécuriser l'accès à mon homelab.",
+        "description": "Implémentation d'un tunnel VPN couplé à un WAF afin de sécuriser l'accès externe à mon homelab.",
         "lien": "https://docs.loutik.fr/docs/homelab/socle-physique-et-reseau/introduction#2-la-gateway--un-cloudflare-tunnel-fait-maison",
         "tags": ["Docker", "Réseau", "Sécurité"],
         "categorie": "personnel"
@@ -18,7 +42,7 @@
     {
         "titre": "Cluster K3s Loutik",
         "image": "assets/img/projet-k3s-loutik.png",
-        "description": "Mise en place d'un cluster K3s avec 3 nœuds pour héberger des applications conteneurisées.",
+        "description": "Déploiement d'un cluster K3s à trois nœuds pour héberger et orchestrer des applications conteneurisées.",
         "lien": "https://docs.loutik.fr/docs/homelab/cluster-k3s/introduction",
         "tags": ["Docker", "Réseau", "Sécurité"],
         "categorie": "personnel"
@@ -26,7 +50,7 @@
     {
         "titre": "Traefik reverse proxy",
         "image": "assets/img/projet-traefik.png",
-        "description": "Mise en place d'un reverse proxy avec Traefik pour gérer les requêtes HTTPS sur mon homelab.",
+        "description": "Mise en place d'un reverse proxy Traefik pour centraliser le routage des services et la gestion des flux HTTPS de mon homelab.",
         "lien": "https://kdrive.infomaniak.com/app/share/831857/35e30e55-8e6a-4590-a075-c17dbcc8939a",
         "tags": ["Docker", "Réseau", "Sécurité"],
         "categorie": "personnel"
@@ -34,7 +58,7 @@
     {
         "titre": "WIKI Loutik",
         "image": "assets/img/projet-wiki-loutik.png",
-        "description": "Mise en place d'un wiki avec docusaurus pour partager mes procédures.",
+        "description": "Conception d'un wiki technique sous Docusaurus pour centraliser et partager mes procédures d'administration.",
         "lien": "https://docs.loutik.fr",
         "tags": ["Documentation", "Web", "Partage"],
         "categorie": "personnel"

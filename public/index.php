@@ -285,7 +285,7 @@ include __DIR__ . '/../includes/header.php';
                         <?php if ($isBtsProject && !empty($tags)): ?>
                             <div class="mb-4">
                                 <h4 class="text-sm sm:text-base font-semibold text-gray-800 mb-2">Compétences mobilisées</h4>
-                                <ul class="list-disc pl-5 space-y-1 text-sm sm:text-base text-gray-700">
+                                <ul class="project-skills-list space-y-1 text-sm sm:text-base text-gray-700">
                                     <?php foreach ($tags as $tag): ?>
                                         <li><?= e($tag) ?></li>
                                     <?php endforeach; ?>

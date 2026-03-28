@@ -93,3 +93,10 @@ body {
     font-weight: 500;
     color: #555;
 }
+/* Liste dédiée aux compétences mobilisées sur les projets BTS */
+.project-skills-list {
+    list-style: disc !important;
+    list-style-position: outside;
+    padding-left: 1.25rem;
+    margin-left: 0;
+}

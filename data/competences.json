@@ -11,8 +11,7 @@
         "skills": [
             { "name": "VMware ESXi", "icon": "devicon-vsphere-plain" },
             { "name": "Proxmox", "icon": "devicon-proxmox-plain-wordmark" },
-            { "name": "Docker", "icon": "devicon-docker-plain colored" },
-            { "name": "LXC", "icon": "devicon-linux-plain colored" }
+            { "name": "Docker", "icon": "devicon-docker-plain colored" }
         ]
     },
     {
